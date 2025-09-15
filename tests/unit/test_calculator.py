@@ -54,3 +54,15 @@ class TestMultiplyDivide:
     def test_divide_by_zero(self):
         with pytest.raises(ZeroDivisionError):
             divide(5, 0)
+
+    def test_divide_negative_numbers(self):
+        assert divide(-10, 2) == -5
+        assert divide(-9, -3) == 3
+    def test_divide_resulting_in_float(self):
+        assert divide(7, 2) == 3.5
+        assert divide(5, 4) == 1.25
+
+        #pow-root
+    def test_multiply_by_zero(self):
+        assert multiply(0, 5) == 0
+        assert multiply(7, 0) == 0
